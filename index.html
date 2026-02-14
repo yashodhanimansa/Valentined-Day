@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>💋 Our Valentine Kiss | My Love</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Particles Background */
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-100px) scale(0.8); }
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 60px 60px 40px 40px;
+            box-shadow: 0 40px 60px rgba(255, 20, 147, 0.3),
+                        0 0 0 5px rgba(255, 255, 255, 0.8);
+            padding: 35px 25px 45px;
+            position: relative;
+            z-index: 10;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .cute-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            background: linear-gradient(135deg, #d43f6b, #ff2e63, #c13584);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5);
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+        
+        .cute-subtitle {
+            font-size: 22px;
+            color: #b3436b;
+            background: rgba(255, 255, 255, 0.6);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+            font-family: 'Dancing Script', cursive;
+            border: 2px solid white;
+        }
+        
+        /* =========================================== */
+        /* PROFESSIONAL KISSING CARTOON ANIMATION */
+        /* =========================================== */
+        .kissing-couple-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 35px 0 30px;
+            position: relative;
+            height: 240px;
+        }
+        
+        /* Boy Character - Professional Design */
+        .boy-character {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(145deg, #fde2c4, #fdcca5);
+            border-radius: 50% 50% 45% 45%;
+            position: relative;
+            box-shadow: 0 15px 0 #b3704a, 0 20px 30px rgba(0,0,0,0.2);
+            border: 6px solid white;
+            z-index: 5;
+            animation: boyKiss 2.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+        }
+        
+        @keyframes boyKiss {
+            0%, 100% { transform: translateX(-8px) translateY(0); }
+            50% { transform: translateX(-25px) translateY(-5px) rotate(-2deg); }
+        }
+        
+        .boy-hair {
+            position: absolute;
+            width: 100px;
+            height: 55px;
+            background: #5d3a1a;
+            border-radius: 70% 70% 30% 30%;
+            top: -25px;
+            left: 25px;
+            box-shadow: inset 0 -5px 0 #3b260e;
+        }
+        
+        .boy-face-detail {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .boy-eyes {
+            position: absolute;
+            width: 20px;
+            height: 26px;
+            background: white;
+            border-radius: 50%;
+            top: 50px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        
+        .boy-eyes.left { left: 35px; }
+        .boy-eyes.right { right: 35px; }
+        
+        .boy-pupil {
+            position: absolute;
+            width: 12px;
+            height: 18px;
+            background: #221c1c;
+            border-radius: 50%;
+            top: 4px;
+            left: 4px;
+            animation: lookAtGirl 4s infinite;
+        }
+        
+        @keyframes lookAtGirl {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+        
+        .boy-eyebrow {
+            position: absolute;
+            width: 25px;
+            height: 6px;
+            background: #5d3a1a;
+            border-radius: 10px;
+            top: 40px;
+        }
+        
+        .boy-eyebrow.left { left: 30px; transform: rotate(-5deg); }
+        .boy-eyebrow.right { right: 30px; transform: rotate(5deg); }
+        
+        .boy-blush {
+            position: absolute;
+            width: 25px;
+            height: 15px;
+            background: rgba(255, 138, 174, 0.5);
+            border-radius: 50%;
+            bottom: 45px;
+            filter: blur(3px);
+        }
+        
+        .boy-blush.left { left: 20px; }
+        .boy-blush.right { right: 20px; }
+        
+        .boy-lips {
+            position: absolute;
+            width: 25px;
+            height: 12px;
+            background: #d44e8c;
+            border-radius: 50%;
+            bottom: 30px;
+            left: 62px;
+            transform: rotate(5deg);
+            animation: boyLipsKiss 2.5s infinite;
+        }
+        
+        @keyframes boyLipsKiss {
+            0%, 100% { transform: rotate(5deg) scale(1); }
+            50% { transform: rotate(8deg) scale(1.1); }
+        }
+        
+        /* Girl Character - Professional Design */
+        .girl-character {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(145deg, #ffdbd0, #ffb3c1);
+            border-radius: 50% 50% 45% 45%;
+            position: relative;
+            box-shadow: 0 15px 0 #b35f7a, 0 20px 30px rgba(0,0,0,0.2);
+            border: 6px solid white;
+            z-index: 5;
+            animation: girlKiss 2.5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95) 0.2s;
+        }
+        
+        @keyframes girlKiss {
+            0%, 100% { transform: translateX(8px) translateY(0); }
+            50% { transform: translateX(25px) translateY(-5px) rotate(2deg); }
+        }
+        
+        .girl-hair {
+            position: absolute;
+            width: 110px;
+            height: 60px;
+            background: #8b5a2b;
+            border-radius: 80% 80% 30% 30%;
+            top: -28px;
+            left: 20px;
+            box-shadow: inset 0 -5px 0 #5d3a1a;
+        }
+        
+        .girl-ribbon {
+            position: absolute;
+            width: 35px;
+            height: 20px;
+            background: #ff1493;
+            border-radius: 30%;
+            top: -15px;
+            left: 57px;
+            transform: rotate(5deg);
+            box-shadow: 0 6px 0 #b30f6b;
+            z-index: 15;
+        }
+        
+        .girl-eyes {
+            position: absolute;
+            width: 22px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            top: 50px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        
+        .girl-eyes.left { left: 35px; }
+        .girl-eyes.right { right: 35px; }
+        
+        .girl-pupil {
+            position: absolute;
+            width: 13px;
+            height: 19px;
+            background: #221c1c;
+            border-radius: 50%;
+            top: 4px;
+            left: 4px;
+            animation: lookAtBoy 4s infinite;
+        }
+        
+        @keyframes lookAtBoy {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(-5px); }
+        }
+        
+        .girl-eyelash {
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            background: #4a3b3b;
+            top: 45px;
+        }
+        
+        .girl-eyelash.left { left: 27px; transform: rotate(-20deg); }
+        .girl-eyelash.right { right: 27px; transform: rotate(20deg); }
+        
+        .girl-blush {
+            position: absolute;
+            width: 28px;
+            height: 18px;
+            background: rgba(255, 107, 139, 0.5);
+            border-radius: 50%;
+            bottom: 45px;
+            filter: blur(3px);
+        }
+        
+        .girl-blush.left { left: 15px; }
+        .girl-blush.right { right: 15px; }
+        
+        .girl-lips {
+            position: absolute;
+            width: 28px;
+            height: 12px;
+            background: #d43f6b;
+            border-radius: 50%;
+            bottom: 30px;
+            left: 61px;
+            transform: rotate(-5deg);
+            animation: girlLipsKiss 2.5s infinite 0.1s;
+        }
+        
+        @keyframes girlLipsKiss {
+            0%, 100% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(-8deg) scale(1.1); }
+        }
+        
+        /* Kissing Effect - Professional */
+        .kiss-effect {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            gap: 20px;
+            z-index: 20;
+        }
+        
+        .kiss-bubble {
+            font-size: 40px;
+            filter: drop-shadow(0 5px 10px rgba(255, 20, 147, 0.5));
+            animation: kissFloat 2s infinite;
+        }
+        
+        .kiss-bubble:nth-child(1) { animation-delay: 0s; }
+        .kiss-bubble:nth-child(2) { animation-delay: 0.3s; }
+        .kiss-bubble:nth-child(3) { animation-delay: 0.6s; }
+        
+        @keyframes kissFloat {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 1; }
+            50% { transform: translateY(-20px) scale(1.2); opacity: 0.8; }
+        }
+        
+        /* Sparkle Effects */
+        .sparkle {
+            position: absolute;
+            color: #ffd700;
+            font-size: 20px;
+            animation: sparkle 2s infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+        
+        .sparkle:nth-child(1) { top: 10%; left: 20%; }
+        .sparkle:nth-child(2) { top: 30%; right: 25%; animation-delay: 0.5s; }
+        .sparkle:nth-child(3) { bottom: 20%; left: 30%; animation-delay: 1s; }
+        
+        /* =========================================== */
+        /* HEART LOGO */
+        /* =========================================== */
+        .heart-logo-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .professional-heart {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(145deg, #ff2e63, #c13584);
+            transform: rotate(-45deg);
+            animation: professionalBeat 1.2s infinite;
+            box-shadow: 0 0 50px #ff2e63;
+            border-radius: 10px;
+        }
+        
+        .professional-heart::before,
+        .professional-heart::after {
+            content: '';
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(145deg, #ff2e63, #c13584);
+            border-radius: 50%;
+        }
+        
+        .professional-heart::before {
+            top: -45px;
+            left: 0;
+        }
+        
+        .professional-heart::after {
+            top: 0;
+            left: 45px;
+        }
+        
+        .heart-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            font-size: 40px;
+            color: white;
+            z-index: 2;
+            text-shadow: 2px 2px 0 #b3003b;
+        }
+        
+        @keyframes professionalBeat {
+            0%, 100% { transform: rotate(-45deg) scale(1); }
+            50% { transform: rotate(-45deg) scale(1.15); }
+        }
+        
+        /* =========================================== */
+        /* PROFESSIONAL LOVE LETTER */
+        /* =========================================== */
+        .love-letter-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 40px 40px 40px 15px;
+            padding: 30px 25px;
+            margin: 30px 0;
+            box-shadow: 0 15px 0 #ff8eb5, 0 25px 40px rgba(255, 105, 180, 0.3);
+            border: 3px solid white;
+            position: relative;
+        }
+        
+        .letter-header {
+            font-family: 'Dancing Script', cursive;
+            font-size: 36px;
+            color: #d43f6b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .letter-paragraph {
+            font-size: 17px;
+            color: #5d3a5c;
+            line-height: 1.8;
+            text-align: center;
+            margin: 15px 0;
+            font-weight: 400;
+        }
+        
+        .letter-signature-prof {
+            font-family: 'Dancing Script', cursive;
+            font-size: 34px;
+            color: #ff2e63;
+            text-align: right;
+            margin-top: 25px;
+            border-top: 2px solid #ffb6c1;
+            padding-top: 20px;
+        }
+        
+        /* =========================================== */
+        /* QUESTION AND BUTTONS */
+        /* =========================================== */
+        .question-wrapper {
+            text-align: center;
+            margin: 30px 0 25px;
+        }
+        
+        .main-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 44px;
+            background: linear-gradient(135deg, #d43f6b, #ff2e63);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+        
+        .arrow-indicator {
+            font-size: 45px;
+            color: #ff6b9d;
+            animation: bounce 1.5s infinite;
+            display: block;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+        
+        /* Button Container */
+        .button-arena {
+            position: relative;
+            min-height: 250px;
+            margin: 25px 0 30px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 80px;
+            padding: 30px 20px;
+            border: 3px dashed white;
+        }
+        
+        /* YES Button - Professional */
+        .btn-yes-pro {
+            background: linear-gradient(145deg, #ff6b9d, #ff2e63, #c13584);
+            color: white;
+            border: none;
+            padding: 28px 20px;
+            font-size: 52px;
+            font-weight: 700;
+            border-radius: 120px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+            text-shadow: 3px 3px 0 #a00037;
+            box-shadow: 0 18px 0 #a00037, 0 25px 40px rgba(255, 46, 99, 0.5);
+            transition: all 0.1s ease;
+            border: 5px solid white;
+            letter-spacing: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-yes-pro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            100% { left: 100%; }
+        }
+        
+        .btn-yes-pro:active {
+            transform: translateY(10px);
+            box-shadow: 0 8px 0 #a00037, 0 20px 35px rgba(255, 46, 99, 0.5);
+        }
+        
+        .btn-yes-pro i {
+            margin-right: 15px;
+            font-size: 55px;
+        }
+        
+        /* NO Button - Professional Runner */
+        .btn-no-pro {
+            background: linear-gradient(145deg, #a9a9a9, #696969);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            font-size: 32px;
+            font-weight: 600;
+            border-radius: 70px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 12px 0 #404040, 0 12px 25px rgba(0,0,0,0.3);
+            position: absolute;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 30;
+            border: 4px solid #ffe6f0;
+            min-width: 170px;
+            text-shadow: 2px 2px 0 #404040;
+            right: 20px;
+            bottom: 35px;
+        }
+        
+        .btn-no-pro i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        /* Footer */
+        .footer-pro {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #b3436b;
+        }
+        
+        .footer-pro i {
+            color: #ff2e63;
+            animation: heartBeat 1.5s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        /* Success Modal - Professional */
+        .modal-pro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 20px;
+        }
+        
+        .modal-content-pro {
+            background: linear-gradient(145deg, #fff5f9, #ffe4ec);
+            border-radius: 70px 70px 40px 40px;
+            padding: 50px 35px;
+            max-width: 550px;
+            width: 100%;
+            text-align: center;
+            border: 8px solid white;
+            box-shadow: 0 30px 0 #ff8eb5, 0 50px 80px rgba(255, 46, 99, 0.4);
+            animation: modalAppear 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        @keyframes modalAppear {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .modal-content-pro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #ff2e63;
+            margin: 20px 0;
+            text-shadow: 3px 3px 0 white;
+        }
+        
+        .modal-content-pro p {
+            font-size: 26px;
+            color: #a13e6b;
+            font-weight: 600;
+            margin: 20px 0;
+        }
+        
+        .modal-btn-pro {
+            background: linear-gradient(145deg, #ff6b9d, #ff2e63);
+            border: none;
+            padding: 22px 45px;
+            font-size: 32px;
+            border-radius: 70px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            box-shadow: 0 12px 0 #a00037;
+            cursor: pointer;
+            margin-top: 25px;
+            border: 5px solid white;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 550px) {
+            .cute-title { font-size: 42px; }
+            .main-question { font-size: 36px; }
+            .btn-yes-pro { font-size: 42px; padding: 22px 15px; }
+            .btn-yes-pro i { font-size: 42px; }
+            .btn-no-pro { font-size: 28px; padding: 15px 25px; min-width: 150px; }
+            .boy-character, .girl-character { width: 130px; height: 130px; }
+        }
+        
+        @media (max-width: 400px) {
+            .cute-title { font-size: 36px; }
+            .btn-yes-pro { font-size: 36px; }
+            .btn-no-pro { font-size: 24px; }
+            .boy-character, .girl-character { width: 110px; height: 110px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles Background -->
+    <div class="particles-bg" id="particlesBg"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="cute-title">MY CUTEST BABY</h1>
+            <div class="cute-subtitle">
+                <i class="fas fa-heart"></i> You're My Everything <i class="fas fa-heart"></i>
+            </div>
+        </div>
+        
+        <!-- ========================================= -->
+        <!-- PROFESSIONAL KISSING CARTOON COUPLE -->
+        <!-- ========================================= -->
+        <div class="kissing-couple-container">
+            <!-- Boy Character -->
+            <div class="boy-character">
+                <div class="boy-hair"></div>
+                <div class="boy-eyes left"><div class="boy-pupil"></div></div>
+                <div class="boy-eyes right"><div class="boy-pupil"></div></div>
+                <div class="boy-eyebrow left"></div>
+                <div class="boy-eyebrow right"></div>
+                <div class="boy-blush left"></div>
+                <div class="boy-blush right"></div>
+                <div class="boy-lips"></div>
+            </div>
+            
+            <!-- Kissing Effect -->
+            <div class="kiss-effect">
+                <span class="kiss-bubble">💋</span>
+                <span class="kiss-bubble">😘</span>
+                <span class="kiss-bubble">💖</span>
+            </div>
+            
+            <!-- Girl Character -->
+            <div class="girl-character">
+                <div class="girl-hair"></div>
+                <div class="girl-ribbon"></div>
+                <div class="girl-eyes left"><div class="girl-pupil"></div></div>
+                <div class="girl-eyes right"><div class="girl-pupil"></div></div>
+                <div class="girl-eyelash left"></div>
+                <div class="girl-eyelash right"></div>
+                <div class="girl-blush left"></div>
+                <div class="girl-blush right"></div>
+                <div class="girl-lips"></div>
+            </div>
+            
+            <!-- Sparkles -->
+            <div class="sparkle">✨</div>
+            <div class="sparkle">✨</div>
+            <div class="sparkle">✨</div>
+        </div>
+        
+        <!-- Heart Logo -->
+        <div class="heart-logo-container">
+            <div class="professional-heart">
+                <div class="heart-icon">💋</div>
+            </div>
+        </div>
+        
+        <!-- Professional Love Letter -->
+        <div class="love-letter-card">
+            <div class="letter-header">My Beautiful Valentine,</div>
+            <div class="letter-paragraph">
+                From the moment I first saw you in school, my world changed forever. Your smile brightened every classroom, your laughter became my favorite melody.
+            </div>
+            <div class="letter-paragraph">
+                Those days of passing notes, stealing glances, walking home together - they weren't just school memories. They were the moments I fell deeper in love with you.
+            </div>
+            <div class="letter-paragraph">
+                You're not just my girlfriend. You're my best friend, my soulmate, my everything. Every day with you feels like Valentine's Day.
+            </div>
+            <div class="letter-paragraph">
+                Today, I want to ask you the most important question...
+            </div>
+            <div class="letter-signature-prof">
+                Forever Yours, <br>
+                Your Love 💋
+            </div>
+        </div>
+        
+        <!-- The Big Question -->
+        <div class="question-wrapper">
+            <div class="main-question">Will You Be My Valentine?</div>
+            <span class="arrow-indicator">👇</span>
+        </div>
+        
+        <!-- Button Arena -->
+        <div class="button-arena" id="buttonArena">
+            <!-- YES Button - Professional -->
+            <button class="btn-yes-pro" id="yesBtn">
+                <i class="fas fa-heart"></i> YES!
+            </button>
+            
+            <!-- NO Button - Professional Runner -->
+            <button class="btn-no-pro" id="noBtn">
+                <i class="fas fa-times-circle"></i> No
+            </button>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer-pro">
+            <i class="fas fa-heart"></i> made with a thousand kisses for you <i class="fas fa-heart"></i>
+        </div>
+    </div>
+    
+    <!-- Success Modal -->
+    <div class="modal-pro" id="successModal">
+        <div class="modal-content-pro">
+            <div style="font-size: 90px;">💋💖😘</div>
+            <h2>YAY! YOU SAID YES!</h2>
+            <p>You've made me the happiest person in the world! I love you more than anything!</p>
+            <div style="font-size: 60px; margin: 20px 0;">❤️ 💋 ❤️</div>
+            <button class="modal-btn-pro" id="closeModal">
+                I LOVE YOU TOO!
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        // =========================================
+        // PARTICLES BACKGROUND
+        // =========================================
+        const particlesBg = document.getElementById('particlesBg');
+        
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            const size = Math.random() * 10 + 5;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 5 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            particle.style.background = `rgba(255, ${Math.random() * 100 + 100}, ${Math.random() * 150}, ${Math.random() * 0.3 + 0.2})`;
+            
+            particlesBg.appendChild(particle);
+        }
+        
+        for (let i = 0; i < 50; i++) {
+            createParticle();
+        }
+        
+        // =========================================
+        // NO BUTTON - PROFESSIONAL RUNNER
+        // =========================================
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const arena = document.getElementById('buttonArena');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+        
+        let runCount = 0;
+        let isRunning = false;
+        
+        const runningPhrases = [
+            "No 💨", 
+            "Can't Catch 🏃", 
+            "Too Fast ⚡", 
+            "Missed Me! 🌪️", 
+            "Almost! ⭐",
+            "Try Again! 💫",
+            "Nope! 🎯",
+            "Keep Trying! 💪",
+            "You're Close! 🎀"
+        ];
+        
+        function runAwayProfessional() {
+            if (isRunning) return;
+            
+            isRunning = true;
+            runCount++;
+            
+            // Update button text
+            if (runCount <= runningPhrases.length) {
+                noBtn.innerHTML = `<i class="fas fa-times-circle"></i> ${runningPhrases[runCount-1]}`;
+            }
+            
+            // Get arena boundaries
+            const arenaRect = arena.getBoundingClientRect();
+            const noBtnRect = noBtn.getBoundingClientRect();
+            
+            // Calculate safe random position
+            const maxX = arenaRect.width - noBtnRect.width - 20;
+            const maxY = arenaRect.height - noBtnRect.height - 20;
+            
+            const newX = 10 + Math.random() * (maxX - 20);
+            const newY = 10 + Math.random() * (maxY - 20);
+            
+            // Apply new position
+            noBtn.style.left = newX + 'px';
+            noBtn.style.top = newY + 'px';
+            noBtn.style.right = 'auto';
+            noBtn.style.bottom = 'auto';
+            
+            // Enhance YES button
+            yesBtn.style.transform = 'scale(1.1)';
+            yesBtn.style.boxShadow = '0 20px 0 #a00037, 0 30px 45px rgba(255,46,99,0.6)';
+            
+            // Mobile vibration
+            if (navigator.vibrate) {
+                navigator.vibrate(30);
+            }
+            
+            setTimeout(() => {
+                isRunning = false;
+            }, 500);
+        }
+        
+        // Events for running
+        noBtn.addEventListener('mouseenter', runAwayProfessional);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            runAwayProfessional();
+        });
+        
+        noBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            runAwayProfessional();
+        });
+        
+        // =========================================
+        // YES BUTTON - CELEBRATION
+        // =========================================
+        yesBtn.addEventListener('click', () => {
+            // Hide NO button
+            noBtn.style.display = 'none';
+            
+            // Professional celebration
+            for (let i = 0; i < 60; i++) {
+                setTimeout(() => {
+                    createProConfetti();
+                }, i * 30);
+            }
+            
+            // Vibration pattern
+            if (navigator.vibrate) {
+                navigator.vibrate([200, 100, 200, 100, 200]);
+            }
+            
+            // Show modal
+            setTimeout(() => {
+                successModal.style.display = 'flex';
+            }, 800);
+            
+            // Transform YES button
+            yesBtn.innerHTML = '<i class="fas fa-heart"></i> I LOVE YOU! 💋';
+            yesBtn.style.background = 'linear-gradient(145deg, #ff9f4b, #ff6b9d, #ff1493)';
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            successModal.style.display = 'none';
+        });
+        
+        successModal.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+        
+        // Professional Confetti
+        function createProConfetti() {
+            const confetti = document.createElement('div');
+            confetti.style.position = 'fixed';
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = '-20px';
+            confetti.style.fontSize = (Math.random() * 30 + 25) + 'px';
+            
+            const symbols = ['❤️', '💋', '😘', '💖', '💗', '💘', '💝', '💕', '💞', '💓', '✨', '⭐'];
+            confetti.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+            
+            confetti.style.zIndex = '9999';
+            confetti.style.pointerEvents = 'none';
+            confetti.style.transition = 'all 3.5s ease';
+            confetti.style.opacity = '1';
+            confetti.style.filter = 'drop-shadow(0 0 5px gold)';
+            
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.style.transform = `translateY(${window.innerHeight + 150}px) rotate(${Math.random() * 720}deg)`;
+                confetti.style.opacity = '0';
+            }, 10);
+            
+            setTimeout(() => {
+                if (confetti.parentElement) confetti.remove();
+            }, 3500);
+        }
+        
+        // Reset NO button on resize
+        window.addEventListener('resize', () => {
+            noBtn.style.left = 'auto';
+            noBtn.style.top = 'auto';
+            noBtn.style.bottom = '35px';
+            noBtn.style.right = '20px';
+        });
+    </script>
+</body>
+</html>
